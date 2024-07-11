@@ -1,0 +1,102 @@
+[
+    {
+        "category": "Cricket",
+        "name": "Adidas Soccer Ball",
+        "stock_quantity": 50,
+        "brand": "Adidas",
+        "rating": 4.5,
+        "description": "High-quality soccer ball for professional matches.",
+        "price": 29.99,
+        "image": "https://i.ibb.co/g670hpT/download-15.jpg"
+    },
+    {
+        "category": "Basketball",
+        "name": "Spalding NBA Basketball",
+        "stock_quantity": 30,
+        "brand": "Spalding",
+        "rating": 4.7,
+        "description": "Official NBA basketball, perfect for indoor and outdoor play.",
+        "price": 39.99,
+        "image": "https://i.ibb.co/Nt2pSJJ/download-2.jpg"
+    },
+    {
+        "category": "Tennis",
+        "name": "Wilson Pro Staff Tennis Racket",
+        "stock_quantity": 20,
+        "brand": "Wilson",
+        "rating": 4.8,
+        "description": "Professional-grade tennis racket used by top players.",
+        "price": 199.99,
+        "image": "https://i.ibb.co/vvK0WNF/download-3.jpg"
+    },
+    {
+        "category": "Running",
+        "name": "Nike Air Zoom Pegasus",
+        "stock_quantity": 100,
+        "brand": "Nike",
+        "rating": 4.6,
+        "description": "Comfortable and durable running shoes with excellent cushioning.",
+        "price": 119.99,
+        "image": "https://i.ibb.co/6yyWkQV/download-4.jpg"
+    },
+    {
+        "category": "Fitness",
+        "name": "Fitbit Charge 4",
+        "stock_quantity": 80,
+        "brand": "Fitbit",
+        "rating": 4.4,
+        "description": "Advanced fitness tracker with built-in GPS and heart rate monitor.",
+        "price": 149.99,
+        "image": "https://i.ibb.co/CBtXvW8/download-5.jpg"
+    },
+    {
+        "category": "Outdoor",
+        "name": "North Face Hiking Backpack",
+        "stock_quantity": 60,
+        "brand": "The North Face",
+        "rating": 4.9,
+        "description": "Durable and spacious backpack for long hiking trips.",
+        "price": 129.99,
+        "image": "https://i.ibb.co/m0Bvvzx/download-7.jpg"
+    },
+    {
+        "category": "Swimming",
+        "name": "Speedo Swim Goggles",
+        "stock_quantity": 150,
+        "brand": "Speedo",
+        "rating": 4.3,
+        "description": "High-quality swim goggles with anti-fog lenses.",
+        "price": 24.99,
+        "image": "https://i.ibb.co/nCCXJ5N/download-6.jpg"
+    },
+    {
+        "category": "Cycling",
+        "name": "Giant Road Bike",
+        "stock_quantity": 10,
+        "brand": "Giant",
+        "rating": 4.7,
+        "description": "Lightweight and aerodynamic road bike for competitive cycling.",
+        "price": 999.99,
+        "image": "https://i.ibb.co/5xccFxJ/download-8.jpg"
+    },
+    {
+        "category": "Golf",
+        "name": "Titleist Pro V1 Golf Balls",
+        "stock_quantity": 200,
+        "brand": "Titleist",
+        "rating": 4.8,
+        "description": "Premium golf balls designed for maximum distance and control.",
+        "price": 49.99,
+        "image": "https://i.ibb.co/27vShW1/download-10.jpg"
+    },
+    {
+        "category": "Baseball",
+        "name": "Rawlings Baseball Glove",
+        "stock_quantity": 40,
+        "brand": "Rawlings",
+        "rating": 4.6,
+        "description": "Professional-quality baseball glove for infield and outfield play.",
+        "price": 79.99,
+        "image": "https://i.ibb.co/ydX1rbN/download-1.jpg"
+    }
+]
