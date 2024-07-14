@@ -41,6 +41,12 @@ async function run() {
             res.send(result)
         })
 
+        app.get('/latest', async (req, res) => {
+            const cursor = productCollection.find().sort({ createdAt: -1 }).limit(4);
+            const result = await cursor.toArray();
+            res.send(result)
+        })
+
         app.get('/products/:id', async (req, res) => {
             try {
                 const id = req.params.id;
@@ -70,11 +76,51 @@ async function run() {
             }
         });
 
+        app.post('/products', async (req, res) => {
+            try {
+                const item = req.body;
+                const result = await productCollection.insertOne(item);
+                res.send(result);
+            } catch (error) {
+                console.error("Error adding item to cart:", error);
+                res.status(500).send({ error: 'An error occurred while adding item to cart' });
+            }
+        });
+
         app.get('/carts', async (req, res) => {
             const cursor = cartCollection.find();
             const result = await cursor.toArray();
             res.send(result)
         })
+
+        app.get('/carts/:productId', async (req, res) => {
+            const  productId  = req.params.productId
+            const cartItem = await cartCollection.findOne({productId})
+            if (cartItem) {
+                res.status(200).json({ cartItem })
+            } else {
+                res.status(200).json({ quantity: 0 })
+            }
+        })
+
+        app.post('/cart', async (req, res) => {
+            const { productId, quantity } = req.body;
+            try {
+                let cartItem = await cartCollection.findOne({ productId });
+                if (cartItem) {
+                    // Update quantity if product already in cart
+                    cartItem.quantity = Math.min(cartItem.quantity + 1, cartItem.stock_quantity);
+                } else {
+                    // Add new product to cart
+                    cartItem = new cartCollection(req.body);
+                }
+                await cartItem.save();
+                res.status(200).send('Product added/updated successfully');
+            } catch (error) {
+                console.error(error);
+                res.status(500).send('Server error');
+            }
+        });
 
         app.delete('/carts/:id', async (req, res) => {
             try {
