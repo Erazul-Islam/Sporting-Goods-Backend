@@ -14,8 +14,6 @@ app.use(cors({
 }));
 app.use(express.json())
 
-
-
 const uri = "mongodb+srv://assignment2:I95rJoGW8fj7Ke6Z@taosif.sxba9qz.mongodb.net/product?retryWrites=true&w=majority&appName=Taosif";
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
@@ -34,6 +32,7 @@ async function run() {
 
         const productCollection = client.db('goods').collection('product')
         const cartCollection = client.db('goods').collection('cart');
+        const orderCollection = client.db('goods').collection('orders')
 
         app.get('/products', async (req, res) => {
             const cursor = productCollection.find();
@@ -76,6 +75,12 @@ async function run() {
             }
         });
 
+        app.post('/orders', async (req, res) => {
+            const item = req.body;
+            const result = await orderCollection.insertOne(item)
+            res.send(result)
+        })
+
         app.post('/products', async (req, res) => {
             try {
                 const item = req.body;
@@ -93,9 +98,11 @@ async function run() {
             res.send(result)
         })
 
+
+
         app.get('/carts/:productId', async (req, res) => {
-            const  productId  = req.params.productId
-            const cartItem = await cartCollection.findOne({productId})
+            const productId = req.params.productId
+            const cartItem = await cartCollection.findOne({ productId })
             if (cartItem) {
                 res.status(200).json({ cartItem })
             } else {

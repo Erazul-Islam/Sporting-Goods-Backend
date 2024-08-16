@@ -20,7 +20,7 @@
         "image": "https://i.ibb.co/Nt2pSJJ/download-2.jpg"
     },
     {
-        "category": "Tennis",
+        "category": "Cricket",
         "name": "Wilson Pro Staff Tennis Racket",
         "stock_quantity": 20,
         "brand": "Wilson",
@@ -30,7 +30,7 @@
         "image": "https://i.ibb.co/vvK0WNF/download-3.jpg"
     },
     {
-        "category": "Running",
+        "category": "Cricket",
         "name": "Nike Air Zoom Pegasus",
         "stock_quantity": 100,
         "brand": "Nike",
@@ -40,7 +40,7 @@
         "image": "https://i.ibb.co/6yyWkQV/download-4.jpg"
     },
     {
-        "category": "Fitness",
+        "category": "Basketball",
         "name": "Fitbit Charge 4",
         "stock_quantity": 80,
         "brand": "Fitbit",
